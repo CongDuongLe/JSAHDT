@@ -142,3 +142,8 @@ divQuery.addEventListener('click', handleOnclick)
  // Buôi1 : git và các thao tác cơ bản với git
 
 
+// từ giớ về sau :
+
+// b1 : git add .
+// b2 : git commit -m 'message'
+// b3 : git push origin branchName
