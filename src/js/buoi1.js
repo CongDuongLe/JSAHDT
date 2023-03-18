@@ -146,4 +146,7 @@ divQuery.addEventListener('click', handleOnclick)
 
 // b1 : git add .
 // b2 : git commit -m 'message'
-// b3 : git push origin branchName
+// b3 : git push -u origin branchName
+
+
+// update file js của buổi 1
