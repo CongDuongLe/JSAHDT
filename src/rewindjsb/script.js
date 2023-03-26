@@ -103,3 +103,55 @@ k*=2 // k = k * 2 // 20
 k/=2 // k = k/2 => 10
 
 k%=2 // 10 %2 = 0 ( 10 chia 2 = 5 dư 0)
+
+
+// write function to check the missing number in the array
+
+// input : [1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20]
+// output : 15
+
+
+// 1, tìm số lượng phần tử trong mảng
+// 2, tìm tổng các phần tử trong mảng
+// 3, tìm tổng các phần tử trong mảng theo công thức : n(n+1)/2
+// 4, so sánh 2 kết quả, nếu 2 kết quả khác nhau thì số còn thiếu là kết quả trừ 2 kết quả trên
+
+// 1, tìm số lượng phần tử trong mảng
+
+var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20]
+
+var length = arr.length
+
+console.log(length) // 19
+
+// 2, tìm tổng các phần tử trong mảng
+
+var sum = 0
+
+for (var i = 0; i < arr.length; i++) {
+    sum += arr[i]
+}
+
+console.log(sum) // 190
+
+
+// 3, tìm tổng các phần tử trong mảng theo công thức : n(n+1)/2
+
+var sum2 = 0
+
+for (var i = 1; i <= arr.length + 1; i++) {
+    sum2 += i
+}
+
+console.log(sum2) // 210
+
+
+// 4, so sánh 2 kết quả, nếu 2 kết quả khác nhau thì số còn thiếu là kết quả trừ 2 kết quả trên
+
+console.log(sum2 - sum) // 20
+
+// 5, tìm số còn thiếu trong mảng
+
+var missingNumber = sum2 - sum
+
+console.log(missingNumber) // 20

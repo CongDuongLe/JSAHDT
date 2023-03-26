@@ -1,5 +1,13 @@
 // kiến thức đã được học trong JSB 
 
+// số : numberic : số âm,số dương, số thập phân , ....
+// chuỗi : string : ''. " ", ``,..
+// boolean : true , false,
+// null : không có giá trị đc gán cho biến
+// undefined : biến chưa được gán giá trị
+// obj : {}, array : [], function : ()=>{}
+
+
 // học nhiều : alert(), promp(), =>, 
 
 
@@ -18,23 +26,48 @@
 var a = 3
 var a = 5  // đây là thao tác khai báo biến a với giá trị mới bằng 5 ( trong phạm vi của var thì cách khai báo này là hợp lệ)
 
-console.log(a)  // 5
+// var a ='abc'
+
+console.log(a)  // 'abc'
 
 // let 
  let b = 3 // khai báo biến b lần 1
-//  let b = 10  // khai báo biến b lần 2 : lỗi vì let không cho phép khai báo lại biến b
-
+    // let b = 10  // khai báo biến b lần 2 : lỗi vì let không cho phép khai báo lại biến b
 
 b = 10
+b = 'xyz'
 
  // với let thì chỉ có thể khai báo biến 1 lần DUY NHẤT
 
  console.log(b)  // 10
 
  // const 
- const c =1 
+ const c =1 // khi đã khai báo bằng const thì biến đó mãi mãi chỉ có 1 giá trị và không thể bị thay đổi
+//  c = 2
+    console.log(c) // lỗi vì const không cho phép thay đổi giá trị của biến c
 //  const c =2 // lỗi vì const không cho phép khai báo lại biến c
 // c=2 // lỗi vì const không cho phép thay đổi giá trị của biến c
+
+    const m = '123'
+    const n = 123
+    // = là phép gán :
+
+    // n và m có giống nhau hay không ?
+        console.log(m ==n) // true
+        console.log(m ===n) // false
+
+    // so sánh 2 == thì nó sẽ ép kiểu dữ liệu về 1 kiểu chung duy nhất rồi mới tiến hành so sánh
+    // b1 : ép biến m có giá trị là chuỗi '123' về kiểu số 123
+    // b2 : so sánh với biến n có giá trị là 123 kiểu số
+    // true => hạn chế :không thật sự tường minh khi cần so sánh chặt chẽ các điều kiện đi kèm
+    // hạn chế dùng ==
+
+    // === :nó so sánh kiểu dữ liệu trước rồi mới so sanh giá trị 
+    // m : kiểu string
+    // n : kiểu number 
+    // 2 biến khác kiểu dữ liệu => false  ( nên dùng trong các trường hợp cần so sánh chặt chẽ hay so sánh thông thường để đảm bảo tính toàn vẹn của kiểu dữ liệu)
+
+
 
 
 // 2, các toán tử : so sánh, gán , truy vấn điều kiện , logic
@@ -50,17 +83,62 @@ b = 10
 
 // >=,=<, ?, &&, ||, %, ++variable, --variable, +=, -=, *=, /=
 
+// !== : khác
 
 // a+=1 tương tự như a =a + 1
 // a-- , a++ tương tự như a = a - 1, a = a + 1
 // || hoặc 
 // ?  : tương tự như if else a> 1 ? 'a lớn hơn 1' : ' a nhỏ hơn 1'
 
+// a đang bằng 0
+
+a > 1 && console.log('a là số lớn hơn 1')
+
+// ví dụ x = -10
+
+// && : và (kiếm tra điều kiện đúng rồi mới thực hiện câu lệnh tiếp theo)
+
+// x > 1 ? console.log('x lớn hơn 1') : console.log('x nhỏ hơn 1')
+
 if(a>1){
     console.log('a lớn hơn 1')
 } else {
     console.log('a nhỏ hơn 1')
 }
+
+
+const h =10
+const k = 2
+
+h>5 && k > 10 ? console.log('h lớn hơn 5 hoặc k lớn hơn 10') : null
+
+// ++, --
+// h++ // 11 - tương tự h = h+1
+// k-- // 1 - tuong tự k = k-1
+
+
+const arr = [1,2,3,4,5,6,7,8,9,10]
+
+// b1 : lấy chiều dài của mảng arr.length : chiều dài của mảng : 10
+
+
+// in từng phần tử trong array ?
+// i ban đầu = 0 , so sánh với 10 : nhỏ hơn, thực hiện logic i++ :( i =1)
+// i =1 , 1<10, i =2
+// i = n, n=10, 10 không nhỏ hơn 10 , dừng vòng lặp
+
+for(var i = 0; i < arr.length; i++ ){ 
+    console.log(arr[i])
+}
+
+
+
+// ++ tăng 1 đơn vị vào biến đó
+// -- giảm 1 đơn vị vào biến đó
+
+
+
+
 
 // &&: và a > 0 && b >0 => a, b đều là số dương
 // DOM event và function xử lí tương tác với DOM
@@ -119,7 +197,7 @@ const divQuery = document.querySelector('#div')
  }
 
 
-divQuery.addEventListener('click', handleOnclick)
+// divQuery.addEventListener('click', handleOnclick)
 
 
  const handleDbClick =() => {
